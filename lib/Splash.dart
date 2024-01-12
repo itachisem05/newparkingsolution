@@ -24,26 +24,28 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.blueAccent, Colors.pinkAccent],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft),
-          ),
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Image(image: )
-              Icon(
-                Icons.car_crash,
-                size: 150,
-                color: Colors.blueGrey,
-              )
-            ],
-
-          ),
+      body: Container(
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(colors: [
+            Color(0xFFCDEDFF),
+            Color(0xFFF2DEFF)],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft),
         ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/Main_image.png', height: 850,),
+            // const SizedBox(height: 450,),
+            // Image.asset('assets/Car_Shadow.png', height: 300,),
+            // // const SizedBox(height: 25,),
+            // Image.asset('assets/Parking_Solution_Text.png', height:900,)
+
+          ],
+
+        ),
+      ),
     );
   }
 }
