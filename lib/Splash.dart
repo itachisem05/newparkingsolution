@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 2),() {
+    Timer(Duration(seconds: 10),() {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen(),
       ));
 
@@ -25,13 +25,25 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          color: Colors.pink,
-          child: const Center(child: Text('Parking Solution',style: TextStyle(
-            fontSize: 34,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-          ),)),
-        )
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [Colors.blueAccent, Colors.pinkAccent],
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft),
+          ),
+          child: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Image(image: )
+              Icon(
+                Icons.car_crash,
+                size: 150,
+                color: Colors.blueGrey,
+              )
+            ],
+
+          ),
+        ),
     );
   }
 }
