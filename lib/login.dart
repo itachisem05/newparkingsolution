@@ -141,7 +141,7 @@ class LoginScreen extends StatelessWidget {
                     backgroundColor: Colors.transparent, // Transparent background
                   ),
                   child: Text(
-                    "Reset password?",
+                    "Reset password",
                     style: TextStyle(
                       color:buttonColor, // Adjust color as needed
                       fontWeight: FontWeight.w400,

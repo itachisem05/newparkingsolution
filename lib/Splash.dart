@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 10),() {
+    Timer(Duration(seconds: 5),() {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen(),
       ));
 
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/Main_image.png', height: 850,),
+            Image.asset('assets/images/imageparking.png', height: 850,),
             //finally done with image but not technically
             // const SizedBox(height: 450,),
             // Image.asset('assets/Car_Shadow.png', height: 300,),
