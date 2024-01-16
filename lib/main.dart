@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:newparkingsolution/Splash.dart';
-import 'package:newparkingsolution/login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp(
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,12 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter faezah & Ankit',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(brightness: Brightness.light),
+      darkTheme: ThemeData(brightness: Brightness.light),
+      themeMode: ThemeMode.system,
+      home: const SplashScreen(),
     );
   }
 }
