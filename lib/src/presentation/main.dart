@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/Splash.dart';
+import 'package:newparkingsolution/src/presentation/Splash.dart';
 
 void main() {
   runApp(const MyApp(

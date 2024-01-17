@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/changepassword.dart';
+import 'package:newparkingsolution/src/presentation/changepassword.dart';
 import 'package:newparkingsolution/src/constants/colors.dart';
-import 'package:newparkingsolution/setup.dart';
+import 'package:newparkingsolution/src/presentation/homepage.dart';
 class LoginScreen extends StatelessWidget {
   // ignore: non_constant_identifier_names, avoid_types_as_parameter_names
   const LoginScreen({Key? key, Key}) : super(key: key);

@@ -13,5 +13,6 @@ class ThemeColors {
   static const setuptextonclick = Color.fromRGBO(252, 254, 255, 1);
   static const setupborder = Color.fromRGBO(252, 254, 255, 1);
   static const setuptext = Color.fromRGBO(0, 6, 151, 1);
+  static const divider = Color.fromRGBO(210, 244, 255, 1);
 
 }

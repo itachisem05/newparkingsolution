@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:newparkingsolution/login.dart';
+import 'package:newparkingsolution/src/presentation/login.dart';
 import 'package:newparkingsolution/src/constants/colors.dart';
 
 class ChangePasswordScreen extends StatelessWidget {

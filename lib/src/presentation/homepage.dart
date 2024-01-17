@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newparkingsolution/src/constants/colors.dart';
+import 'package:newparkingsolution/src/presentation/setup.dart';
+import 'package:newparkingsolution/src/presentation/switchitem.dart';
 
 class SetUpPage extends StatelessWidget {
   const SetUpPage({Key? key}) : super(key: key);
@@ -91,9 +93,12 @@ class SetUpPage extends StatelessWidget {
 
                   iconData: Icons.settings, // Add the desired icon
                   onPressed: () {
-                    // Handle the "Set Up" button tap
-                  },
-                ),
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>Setup()),
+                          );
+                          },
+                       ),
                 ),
               ],
             ),
