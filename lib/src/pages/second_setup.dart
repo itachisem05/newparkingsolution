@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/src/constants/colors.dart';
+
+
+import '../utils/colors.dart';
 
 class Setup extends StatefulWidget {
   const Setup({Key? key}) : super(key: key);
@@ -21,24 +23,24 @@ class _SetupState extends State<Setup> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+        backgroundColor:ThemeColors.toptheme, // Set app bar background color to blue
         leading: IconButton(
-          icon: Icon(Icons.arrow_back), // Use the default back icon
+          icon: Icon(Icons.arrow_back, color: Colors.white), // Set icon color to white
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-        title: const Row(
+        title: Row(
           children: [
-          Icon(
-          Icons.settings, // Use the settings icon
-          color: Color(0xFF000697), // Set the color of the icon
-        ),
-        SizedBox(width: 5),
+            Icon(
+              Icons.settings,
+              color: Colors.white, // Set icon color to white
+            ),
+            SizedBox(width: 5),
             Text(
               'Set up',
               style: TextStyle(
-                color: const Color(0xFF000697),
+                color: Colors.white, // Set text color to white
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
               ),
@@ -46,7 +48,6 @@ class _SetupState extends State<Setup> {
           ],
         ),
       ),
-
       body: ListView(
         children: [
           buildListTile('Sensor for Exit', isSelected1, (value) {
@@ -92,30 +93,50 @@ class _SetupState extends State<Setup> {
   Widget buildListTile(String title, bool isSelected, ValueChanged<bool> onChanged) {
     return Column(
       children: [
-        SwitchListTile(
-          title: Text(
-            title,
-            style: TextStyle(
-              color: ThemeColors.tLoginpg,
-              fontWeight: FontWeight.w500,
-              fontSize: 15,
-            ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  color: ThemeColors.tLoginpg,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    'No',
+                    style: TextStyle(
+                      color: isSelected ? Colors.grey : ThemeColors.tLoginpg,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Switch(
+                    value: isSelected,
+                    onChanged: onChanged,
+                    activeColor: Color(0xFFD2F4FF),
+                    activeTrackColor: Color(0xFF000697),
+                    inactiveTrackColor: Color(0xFFF4F7F8),
+                  ),
+                  Text(
+                    'Yes',
+                    style: TextStyle(
+                      color: isSelected ? ThemeColors.tLoginpg : Colors.grey,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-          value: isSelected,
-          onChanged: onChanged,
-          activeColor:const Color(0xFFD2F4FF),
-          activeTrackColor: const Color(0xFF000697),
-          inactiveTrackColor: const Color(0xFF79CFFF),
-          controlAffinity: ListTileControlAffinity.trailing,
-          subtitle: Text(isSelected ? 'Yes' : 'No', style: const TextStyle(color: ThemeColors.tLoginpg)),
-
         ),
-        Container(
-          margin: const EdgeInsets.symmetric(horizontal: 15.0),
-          child: const Divider(
-            color: const Color(0xFFD2F4FF),
-            thickness: 2.0,
-          ),
+        Divider(
+          color: Color(0xFFD2F4FF),
+          thickness: 2.0,
         ),
       ],
     );

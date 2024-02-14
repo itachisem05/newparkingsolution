@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/src/presentation/changepassword.dart';
-import 'package:newparkingsolution/src/constants/colors.dart';
-import 'package:newparkingsolution/src/presentation/homepage.dart';
+import 'package:newparkingsolution/src/auth/reset_login_screen.dart';
+
+
+
+import '../pages/homepage.dart';
+import '../utils/colors.dart';
 class LoginScreen extends StatelessWidget {
-  // ignore: non_constant_identifier_names, avoid_types_as_parameter_names
+
   const LoginScreen({Key? key, Key}) : super(key: key);
 
   @override
@@ -22,10 +25,10 @@ class LoginScreen extends StatelessWidget {
                 const Text(
                   "Login",
                   style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w700,
-                    color: ThemeColors.tLoginpg
+                      fontSize: 16,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w700,
+                      color: ThemeColors.tLoginpg
                   ),
                   textAlign: TextAlign.center,
                 ),

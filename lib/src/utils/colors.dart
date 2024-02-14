@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class ThemeColors {
 
   static const tLoginpg = Color.fromRGBO(26, 47, 100, 1);

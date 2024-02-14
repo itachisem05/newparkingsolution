@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:newparkingsolution/src/presentation/login.dart';
-import 'package:newparkingsolution/src/constants/colors.dart';
+import '../auth/login_screen.dart';
+import '../utils/colors.dart';
 
 class ChangePasswordScreen extends StatelessWidget {
   const ChangePasswordScreen({Key? key}) : super(key: key);
@@ -36,10 +36,10 @@ class ChangePasswordScreen extends StatelessWidget {
                   child: Text(
                     "Current Password",
                     style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Montserrat',
-                      color: ThemeColors.tLoginpg
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Montserrat',
+                        color: ThemeColors.tLoginpg
                     ),
                   ),
                 ),
@@ -65,7 +65,7 @@ class ChangePasswordScreen extends StatelessWidget {
                   keyboardType: TextInputType.phone,
                 ),
 
-      //*****************************************************************************************************
+                //*****************************************************************************************************
                 // Subheading: New Password
                 const Padding(
                   padding: EdgeInsets.only(top: 20,bottom: 10),
@@ -101,7 +101,7 @@ class ChangePasswordScreen extends StatelessWidget {
                   obscureText: true,
                 ),
 
-      //**************************************************************************************************************
+                //**************************************************************************************************************
                 // Subheading: Confirm Password
                 const Padding(
                   padding: EdgeInsets.only(top: 20,bottom:10),
@@ -188,7 +188,7 @@ class ChangePasswordScreen extends StatelessWidget {
                 // Add space from the top after the Submit button
                 const SizedBox(height: 5),
 
-      //*********************************************************************************************************
+                //*********************************************************************************************************
                 // reset password
                 TextButton(
                   onPressed: () {

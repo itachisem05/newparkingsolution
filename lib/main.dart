@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/src/presentation/Splash.dart';
+import 'package:newparkingsolution/src/auth/splash_screen.dart';
+import 'package:newparkingsolution/src/utils/colors.dart';
+
 
 void main() {
   runApp(const MyApp(
@@ -13,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.light),
+      theme: ThemeData(brightness: Brightness.light,
+        primaryColor: ThemeColors.toptheme,
+      ),
       darkTheme: ThemeData(brightness: Brightness.light),
       themeMode: ThemeMode.system,
       home: const SplashScreen(),

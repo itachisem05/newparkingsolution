@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/src/presentation/login.dart';
+import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget{
   const SplashScreen({Key? key}) : super(key: key);
@@ -38,11 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('assets/images/imageparking.png', height: 850,),
-            //finally done with image but not technically
-            // const SizedBox(height: 450,),
-            // Image.asset('assets/Car_Shadow.png', height: 300,),
-            // // const SizedBox(height: 25,),
-            // Image.asset('assets/Parking_Solution_Text.png', height:900,)
+
 
           ],
 
