@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/src/auth/reset_login_screen.dart';
+import 'package:newparkingsolution/src/pages/reset_login_screen.dart';
 
 
 
-import '../pages/homepage.dart';
+import 'homepage.dart';
 import '../utils/colors.dart';
 class LoginScreen extends StatelessWidget {
 

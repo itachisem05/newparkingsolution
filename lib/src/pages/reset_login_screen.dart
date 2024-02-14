@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import '../auth/login_screen.dart';
+import 'login_screen.dart';
 import '../utils/colors.dart';
 
 class ChangePasswordScreen extends StatelessWidget {

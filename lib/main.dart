@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newparkingsolution/src/auth/splash_screen.dart';
+import 'package:newparkingsolution/src/pages/splash_screen.dart';
 import 'package:newparkingsolution/src/utils/colors.dart';
 
 
